@@ -773,38 +773,6 @@ MonoBehaviour:
     zeroFrictionMaterial: {fileID: 0}
     highFrictionMaterial: {fileID: 0}
   fps_Rigidbody: {fileID: 0}
-  useHeadbob: 0
-  head: {fileID: 4682486790611554}
-  headbobFrequency: 1.5
-  headbobSwayAngle: 5
-  headbobHeight: 3
-  headbobSideMovement: 5
-  headbobSpeedMultiplier: 3
-  bobStrideSpeedLength: 3
-  useJumdLandMovement: 1
-  jumpAngle: 3
-  landAngle: 60
-  Volume: 5
-  jumpSound: {fileID: 8300000, guid: fb6839219f2c6674996d76c7d9626311, type: 3}
-  landSound: {fileID: 8300000, guid: fb6839219f2c6674996d76c7d9626311, type: 3}
-  _useFootStepSounds: 0
-  footStepSounds: []
-  dynamicFootstep:
-    useDynamicFootStepProcess: 0
-    _Wood: {fileID: 0}
-    _metalAndGlass: {fileID: 0}
-    _Grass: {fileID: 0}
-    _dirtAndGravle: {fileID: 0}
-    _rockAndConcrete: {fileID: 0}
-    _Mud: {fileID: 0}
-    _CustomMaterial: {fileID: 0}
-    _woodFootsteps: []
-    _metalAndGlassFootsteps: []
-    _GrassFootsteps: []
-    _dirtAndGravelFootsteps: []
-    _rockAndConcreteFootsteps: []
-    _MudFootsteps: []
-    _CustomMaterialFoorsteps: []
 --- !u!136 &136565538138732822
 CapsuleCollider:
   m_ObjectHideFlags: 1
