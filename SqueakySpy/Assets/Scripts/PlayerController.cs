@@ -315,7 +315,6 @@ public class PlayerController : MonoBehaviour
                 isCrouching = false;
 
             }
-
         }
 
         #endregion

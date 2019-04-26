@@ -8778,6 +8778,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8065b3e4441e6454c8402896eb57c70e, type: 2}
+    - target: {fileID: 114895772466041982, guid: 204a9f447290fd5448e7d642d6971214,
+        type: 2}
+      propertyPath: _crouchModifiers.CrouchInputAxis
+      value: LeftControl
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204a9f447290fd5448e7d642d6971214, type: 2}
   m_IsPrefabAsset: 0
