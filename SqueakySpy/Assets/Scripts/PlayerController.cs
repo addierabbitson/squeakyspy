@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
 
 
     [SerializeField] private bool autoCrosshair;
-    public Sprite Crosshair;
 
     private Vector3 targetAngles;
     private Vector3 followAngles;
@@ -145,22 +144,6 @@ public class PlayerController : MonoBehaviour
     {
         #region Look Settings - Start
 
-        if (autoCrosshair)
-        {
-            GameObject qui = new GameObject("AutoCrosshair");
-            qui.AddComponent<RectTransform>();
-            qui.AddComponent<Canvas>();
-            qui.AddComponent<CanvasScaler>();
-            qui.AddComponent<GraphicRaycaster>();
-            qui.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
-            GameObject quic = new GameObject("Crosshair");
-            quic.AddComponent<Image>().sprite = Crosshair;
-
-            qui.transform.SetParent(this.transform);
-            qui.transform.position = Vector3.zero;
-            quic.transform.SetParent(qui.transform);
-            quic.transform.position = Vector3.zero;
-        }
         cameraStartingPosition = playerCamera.localPosition;
         if (lockAndHideMouse) { Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
         #endregion
