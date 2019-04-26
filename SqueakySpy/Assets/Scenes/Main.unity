@@ -8678,6 +8678,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114895772466041982, guid: 204a9f447290fd5448e7d642d6971214,
+        type: 2}
+      propertyPath: Crosshair
+      value: 
+      objectReference: {fileID: 21300000, guid: 7425ac541def3c54d842ed3dd2281e0f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204a9f447290fd5448e7d642d6971214, type: 2}
   m_IsPrefabAsset: 0
