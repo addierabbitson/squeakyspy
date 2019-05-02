@@ -5,24 +5,40 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour {
 
-    public Transform firstNode;
-    private Transform firstPos;
+    public Transform[] nodes;
+    private int destPoint = 0;
     private NavMeshAgent navAgent;
+    private bool setNextDestinationNow = true;
 
-	// Use this for initialization
-	void Start () {
+
+    void Start() {
         navAgent = GetComponent<NavMeshAgent>();
-        firstPos = GetComponent<Transform>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Vector3.Distance(transform.position, firstNode.position) < 2) {
-            navAgent.destination = firstPos.position;
+        navAgent.autoBraking = true;
+        NextNode();
+    }
+
+
+    void NextNode() {
+        if (nodes.Length == 0) {
+            return;
         }
-        if (Vector3.Distance(transform.position, firstPos.position) < 2)
+        
+        navAgent.destination = nodes[destPoint].position;
+        destPoint = (destPoint + 1) % nodes.Length;
+
+        Debug.Log(destPoint);
+
+        setNextDestinationNow = true;
+
+    }
+
+
+    void Update() {
+        if (!navAgent.pathPending && navAgent.remainingDistance < 0.2f && setNextDestinationNow)
         {
-            navAgent.destination = firstNode.position;
+            Invoke("NextNode", 3f);
+            setNextDestinationNow = false;
         }
     }
 }
+
