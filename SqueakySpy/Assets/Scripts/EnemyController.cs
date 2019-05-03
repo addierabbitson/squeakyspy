@@ -27,14 +27,11 @@ public class EnemyController : MonoBehaviour {
         navAgent.destination = nodes[destPoint].position;
         destPoint = (destPoint + 1) % nodes.Length;
 
-        Debug.Log(destPoint);
-
         setNextDestinationNow = true;
 
     }
 
     void MoveToPlayer() {
-        Debug.Log("Player has entered the enemy sight");
         navAgent.destination = player.transform.position;
         Invoke("NextNode", 4f);
     }

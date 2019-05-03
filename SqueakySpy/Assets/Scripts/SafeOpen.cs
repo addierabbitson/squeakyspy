@@ -17,11 +17,14 @@ public class SafeOpen : MonoBehaviour {
             float distanceOfRay = 5;
 
             if (Physics.Raycast(ray, out hit, distanceOfRay)) {
-                safeClosed.SetActive(false);
-                safeOpen.SetActive(true);
-                winMenu.SetActive(true);
-                squeakMeter.SetActive(false);
-                crossHair.SetActive(false);
+                if (hit.collider.tag.Equals("Safe"))
+                {
+                    safeClosed.SetActive(false);
+                    safeOpen.SetActive(true);
+                    winMenu.SetActive(true);
+                    squeakMeter.SetActive(false);
+                    crossHair.SetActive(false);
+                }
             }
         }
     }
