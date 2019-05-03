@@ -556,3 +556,4 @@ MonoBehaviour:
   winMenu: {fileID: 0}
   squeakMeter: {fileID: 0}
   crossHair: {fileID: 0}
+  pressE: {fileID: 0}
