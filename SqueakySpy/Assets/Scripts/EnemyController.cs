@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour {
 
     public Transform[] nodes;
+    public GameObject player;
     private int destPoint = 0;
     private NavMeshAgent navAgent;
     private bool setNextDestinationNow = true;
@@ -32,12 +33,24 @@ public class EnemyController : MonoBehaviour {
 
     }
 
+    void MoveToPlayer() {
+        Debug.Log("Player has entered the enemy sight");
+        navAgent.destination = player.transform.position;
+        Invoke("NextNode", 4f);
+    }
+
 
     void Update() {
-        if (!navAgent.pathPending && navAgent.remainingDistance < 0.2f && setNextDestinationNow)
-        {
+        if (!navAgent.pathPending && navAgent.remainingDistance < 0.2f && setNextDestinationNow) {
             Invoke("NextNode", 3f);
             setNextDestinationNow = false;
+        }
+    }
+
+    void OnTriggerStay(Collider other) {
+        if (other.tag == "Player") {
+            setNextDestinationNow = false;
+            MoveToPlayer();
         }
     }
 }

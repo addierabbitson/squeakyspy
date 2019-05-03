@@ -33,4 +33,8 @@ public class Menus : MonoBehaviour {
     public void BackButton() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
+
+    public void ReturnButton() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }

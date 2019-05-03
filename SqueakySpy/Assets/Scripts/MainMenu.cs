@@ -18,5 +18,6 @@ public class MainMenu : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        Time.timeScale = 1.0f;
     }
 }
