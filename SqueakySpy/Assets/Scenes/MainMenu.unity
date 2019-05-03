@@ -1965,6 +1965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430314793}
   - component: {fileID: 1430314794}
+  - component: {fileID: 1430314795}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -2022,6 +2023,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1430314795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430314792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4950eb40282bef14d98a4867dc0774c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxReduction: 0.2
+  MaxIncrease: 0.2
+  RateDamping: 0.1
+  Strength: 300
+  StopFlickering: 0
 --- !u!1001 &1433491835
 Prefab:
   m_ObjectHideFlags: 0
@@ -2330,6 +2347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1635641762}
   - component: {fileID: 1635641763}
+  - component: {fileID: 1635641764}
   m_Layer: 0
   m_Name: Spot Light (2)
   m_TagString: Untagged
@@ -2387,6 +2405,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1635641764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635641761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4950eb40282bef14d98a4867dc0774c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxReduction: 0.2
+  MaxIncrease: 0.2
+  RateDamping: 0.1
+  Strength: 300
+  StopFlickering: 0
 --- !u!1001 &1651175415
 Prefab:
   m_ObjectHideFlags: 0
@@ -2761,6 +2795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066468280}
   - component: {fileID: 2066468281}
+  - component: {fileID: 2066468282}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -2818,6 +2853,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2066468282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066468279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4950eb40282bef14d98a4867dc0774c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxReduction: 0.2
+  MaxIncrease: 0.2
+  RateDamping: 0.1
+  Strength: 300
+  StopFlickering: 0
 --- !u!1001 &2085588729
 Prefab:
   m_ObjectHideFlags: 0
