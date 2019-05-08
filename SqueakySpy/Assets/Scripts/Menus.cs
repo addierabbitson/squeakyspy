@@ -6,18 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour {
 
-    public static Menus Instance;
-
-    private void Awake() {
-        if (Instance == null) {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }
-        else if (Instance != this) {
-            Destroy(gameObject);
-        }
-    }
-
     public void PlayButton() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
 
     #region Movement Settings
     [Header("Movement Settings")]
-    [Space(8)]
 
     public bool playerCanMove = true;
     [SerializeField] private bool walkByDefault = true;
@@ -101,19 +100,6 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    #region BETA Settings
-    [System.Serializable]
-    public class BETA_SETTINGS
-    {
-
-    }
-
-    [Space(15)]
-    [Space(5)]
-    public BETA_SETTINGS betaSettings = new BETA_SETTINGS();
-
-    #endregion
-
     #endregion
 
     private void Awake()
@@ -134,10 +120,6 @@ public class PlayerController : MonoBehaviour
         _crouchModifiers.defaultJumpPower = jumpPower;
         #endregion
 
-        #region BETA_SETTINGS - Awake
-
-        #endregion
-
     }
 
     private void Start()
@@ -151,10 +133,6 @@ public class PlayerController : MonoBehaviour
         #region Movement Settings - Start
         backgroundStamina = Stamina;
 
-        #endregion
-
-        #region BETA_SETTINGS - Start
-        fOVKick.fovStart = playerCamera.GetComponent<Camera>().fieldOfView;
         #endregion
     }
 
@@ -199,10 +177,6 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region Headbobbing Settings - Update
-
-        #endregion
-
-        #region BETA_SETTINGS - Update
 
         #endregion
     }
@@ -316,10 +290,6 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-
-        #endregion
-
-        #region BETA_SETTINGS - FixedUpdate
 
         #endregion
 

@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class UIDetection : MonoBehaviour {
 
     public GameObject progressionBar;
-    public float health;
-
+    public float squeak;
+    public float speed;
 
     private void Update() {
-        progressionBar.GetComponent<Image>().fillAmount = health * 0.01f;
+        squeak = GameController.Instance.squeak;
+        progressionBar.GetComponent<Image>().fillAmount = Mathf.Lerp(progressionBar.GetComponent<Image>().fillAmount, squeak * 0.01f, Time.deltaTime * speed);
     }
 }

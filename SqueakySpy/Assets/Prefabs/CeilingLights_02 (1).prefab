@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33189726697860724}
   - component: {fileID: 23531713349233670}
   - component: {fileID: 135391236703166388}
+  - component: {fileID: 114472022136537582}
   m_Layer: 0
   m_Name: Trigger 2 (Inner)
   m_TagString: Untagged
@@ -155,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969597719800056}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5.464878, y: 7.571381, z: 22.00015}
+  m_LocalPosition: {x: -0.27087831, y: 1.5338383, z: 0.38315105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4121781187162648}
@@ -366,6 +367,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114472022136537582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010500489392978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fef593f7a674645a4c72bf3090a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135391236703166388
 SphereCollider:
   m_ObjectHideFlags: 1
