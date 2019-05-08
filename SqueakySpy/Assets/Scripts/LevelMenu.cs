@@ -15,5 +15,6 @@ public class LevelMenu : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        Time.timeScale = 1.0f;
     }
 }
