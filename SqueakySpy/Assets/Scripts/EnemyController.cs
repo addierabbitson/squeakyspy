@@ -28,7 +28,6 @@ public class EnemyController : MonoBehaviour {
         destPoint = (destPoint + 1) % nodes.Length;
 
         setNextDestinationNow = true;
-
     }
 
     void MoveToPlayer() {

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Menus : MonoBehaviour {
 
     public void PlayButton() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
 
     public void SettingsButton() {
