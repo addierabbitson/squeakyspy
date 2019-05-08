@@ -25,4 +25,16 @@ public class Menus : MonoBehaviour {
     public void ReturnButton() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
+    public void PreviousButton() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+    }
+
+    public void OneButton() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+
+    public void TwoButton() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
