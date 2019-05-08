@@ -12,11 +12,6 @@ public class SafeOpen : MonoBehaviour {
     public GameObject crossHair;
     public GameObject pressE;
     private bool isCasting;
-    private string labelText;
-
-    void Start() {
-        labelText = "Press E";
-    }
 
     void OnGUI() {
         if (isCasting) {
