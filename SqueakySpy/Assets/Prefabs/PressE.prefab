@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1155997142885690}
+  m_RootGameObject: {fileID: 1403863060829038}
   m_IsPrefabAsset: 1
---- !u!1 &1155997142885690
+--- !u!1 &1403863060829038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224444092117633392}
-  - component: {fileID: 222824076277568044}
-  - component: {fileID: 114392050967776798}
+  - component: {fileID: 224464253949947086}
+  - component: {fileID: 222130604356260220}
+  - component: {fileID: 114871516384240848}
   m_Layer: 5
   m_Name: PressE
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &114392050967776798
+--- !u!114 &114871516384240848
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1155997142885690}
+  m_GameObject: {fileID: 1403863060829038}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
-    textComponent: {fileID: 114392050967776798}
+    textComponent: {fileID: 114871516384240848}
     characterCount: 7
     spriteCount: 0
     spaceCount: 1
@@ -141,19 +141,19 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &222824076277568044
+--- !u!222 &222130604356260220
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1155997142885690}
+  m_GameObject: {fileID: 1403863060829038}
   m_CullTransparentMesh: 0
---- !u!224 &224444092117633392
+--- !u!224 &224464253949947086
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1155997142885690}
+  m_GameObject: {fileID: 1403863060829038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
