@@ -5,9 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class WinMenu : MonoBehaviour {
 
+    private AudioClip mSoundClip;
+    private AudioSource mAudioSource;
+
+    private void Start() {
+        mSoundClip = GetComponent<AudioSource>().clip;
+        mAudioSource = GetComponent<AudioSource>();
+    }
+
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyUp(KeyCode.Escape)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            mAudioSource.PlayOneShot(mSoundClip);
         }
         Time.timeScale = 0.0f;
     }
