@@ -12235,7 +12235,7 @@ Prefab:
     - target: {fileID: 224766649812523348, guid: 63739f8670ed9e74d9ae7a9753c1f174,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 22.4
       objectReference: {fileID: 0}
     - target: {fileID: 224766649812523348, guid: 63739f8670ed9e74d9ae7a9753c1f174,
         type: 2}
@@ -12285,10 +12285,6 @@ Prefab:
     - target: {fileID: 114339203575622350, guid: 63739f8670ed9e74d9ae7a9753c1f174,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724448792192054, guid: 63739f8670ed9e74d9ae7a9753c1f174, type: 2}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
