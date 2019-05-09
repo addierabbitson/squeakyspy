@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 33684941575844976}
   - component: {fileID: 23192523855935360}
   - component: {fileID: 136306612452753206}
+  - component: {fileID: 114458279253005878}
   m_Layer: 0
   m_Name: Trigger 1 (Outer)
   m_TagString: Untagged
@@ -367,6 +368,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114458279253005878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1499949176587646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4ace7a726193d4ca81354325608f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114472022136537582
 MonoBehaviour:
   m_ObjectHideFlags: 1

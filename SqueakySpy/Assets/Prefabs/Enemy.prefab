@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 195213088533936060}
   - component: {fileID: 114658042224443980}
   - component: {fileID: 65117045832770596}
+  - component: {fileID: 114964644862754312}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -67,8 +68,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1971821749172838}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.272, y: 0.06, z: 18.479}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.863455, y: -6.8100004, z: -1.6874008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4366402554387948}
@@ -142,7 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseMenu: {fileID: 0}
-  squeakMeter: {fileID: 0}
+  squeakMeter: {fileID: 1724448792192054, guid: 63739f8670ed9e74d9ae7a9753c1f174,
+    type: 2}
   crossHair: {fileID: 0}
 --- !u!114 &114658042224443980
 MonoBehaviour:
@@ -159,6 +161,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &114964644862754312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1971821749172838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac4faf23e3213543a556c453c385ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 0
 --- !u!136 &136016749399798696
 CapsuleCollider:
   m_ObjectHideFlags: 1

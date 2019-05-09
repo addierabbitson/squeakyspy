@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressionBar: {fileID: 1458013545479268}
   squeak: 0
-  speed: 5
+  speed: 3
 --- !u!114 &114748394780980476
 MonoBehaviour:
   m_ObjectHideFlags: 1
