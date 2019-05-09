@@ -265,7 +265,7 @@ public class PlayerController : MonoBehaviour
                     walkSpeed = _crouchModifiers.walkSpeedWhileCrouching;
                     sprintSpeed = _crouchModifiers.sprintSpeedWhileCrouching;
                     jumpPower = _crouchModifiers.jumpPowerWhileCrouching;
-
+                    GameController.Instance.squeak -= 15;
 
                     isCrouching = true;
 
@@ -273,6 +273,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (isCrouching == true)
             {
+                GameController.Instance.squeak += 15;
                 capsule.height *= 2;
                 if (!_crouchModifiers.useExternalModifier)
                 {
