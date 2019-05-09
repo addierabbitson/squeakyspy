@@ -224,14 +224,6 @@ public class PlayerController : MonoBehaviour
         if (inputXY.magnitude > 1) { inputXY.Normalize(); }
         Vector3 dMove = transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeed;
         float yv = fps_Rigidbody.velocity.y;
-        bool didJump = canHoldJump ? Input.GetButton("Jump") : Input.GetButtonDown("Jump");
-
-        if (IsGrounded && didJump && jumpPower > 0)
-        {
-            yv += jumpPower;
-            IsGrounded = false;
-            didJump = false;
-        }
 
         if (playerCanMove)
         {
