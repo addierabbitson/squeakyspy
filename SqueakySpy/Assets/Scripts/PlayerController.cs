@@ -101,6 +101,8 @@ public class PlayerController : MonoBehaviour
     private AudioClip mSoundClip;
     private AudioSource mAudioSource;
 
+    private bool mSoundPlaying;
+
     #endregion
 
     #endregion
@@ -123,6 +125,7 @@ public class PlayerController : MonoBehaviour
         _crouchModifiers.defaultJumpPower = jumpPower;
         mSoundClip = GetComponent<AudioSource>().clip;
         mAudioSource = GetComponent<AudioSource>();
+        mSoundPlaying = false;
         #endregion
 
     }
@@ -241,16 +244,35 @@ public class PlayerController : MonoBehaviour
         if (dMove.magnitude > 0 || !IsGrounded)
         {
             GetComponent<Collider>().material = advanced.zeroFrictionMaterial;
-            mAudioSource.PlayOneShot(mSoundClip);
         }
         else { GetComponent<Collider>().material = advanced.highFrictionMaterial; }
 
         fps_Rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
-        if (fOVKick.useFOVKick && wasWalking == isSprinting && fps_Rigidbody.velocity.magnitude > 0.1f && !isCrouching)
+        if (fps_Rigidbody.velocity.magnitude > 4f && !isCrouching)
         {
-            StopAllCoroutines();
-            StartCoroutine(wasWalking ? FOVKickOut() : FOVKickIn());
-            mAudioSource.PlayOneShot(mSoundClip);
+            if (mSoundPlaying == false)
+            {
+                Invoke("PlayWalk", 0.3f);
+                mSoundPlaying = true;
+            }
+        }
+
+        if (fps_Rigidbody.velocity.magnitude < 3.6f && fps_Rigidbody.velocity.magnitude > 3f && !isCrouching)
+        {
+            if (mSoundPlaying == false)
+            {
+                Invoke("PlayWalk", 0.5f);
+                mSoundPlaying = true;
+            }
+        }
+
+        if (fps_Rigidbody.velocity.magnitude <= 2.5f && fps_Rigidbody.velocity.magnitude > 1f && isCrouching)
+        {
+            if (mSoundPlaying == false)
+            {
+                Invoke("PlayWalk", 0.8f);
+                mSoundPlaying = true;
+            }
         }
 
         if (useCrouch && _crouchModifiers.CrouchInputAxis != string.Empty)
@@ -295,6 +317,11 @@ public class PlayerController : MonoBehaviour
 
         #endregion
 
+    }
+
+    private void PlayWalk() {
+        mAudioSource.PlayOneShot(mSoundClip);
+        mSoundPlaying = false;
     }
 
     public void UpdateAndApplyExternalCrouchModifies()
