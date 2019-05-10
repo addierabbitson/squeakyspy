@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e285a38827a6c80458535d65fcf552d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseMenu: {fileID: 0}
+  loseMenu: {fileID: 1579102501505452, guid: dad84e6dab4e9b849821470cdf4adfa2, type: 2}
 --- !u!114 &114367771645550814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -936,7 +936,7 @@ MonoBehaviour:
   nodes:
   - {fileID: 0}
   - {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1933075348434326, guid: 204a9f447290fd5448e7d642d6971214, type: 2}
   setNextDestinationNow: 1
 --- !u!114 &114964644862754312
 MonoBehaviour:

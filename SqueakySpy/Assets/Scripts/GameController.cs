@@ -34,6 +34,8 @@ public class GameController : MonoBehaviour {
             squeak = 0;
             isLevel1 = true;
             squeakMeter.SetActive(true);
+            squeakMeter.SetActive(true);
+            Time.timeScale = 1.0f;
         }
         else if (sceneName != "Level 1") {
             isLevel1 = false;
@@ -44,6 +46,7 @@ public class GameController : MonoBehaviour {
             squeak = 0;
             isLevel2 = true;
             squeakMeter.SetActive(true);
+            Time.timeScale = 1.0f;
         }
         else if (sceneName != "Level 2") {
             isLevel2 = false;
