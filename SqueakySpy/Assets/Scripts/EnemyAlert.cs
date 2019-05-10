@@ -11,6 +11,7 @@ public class EnemyAlert : MonoBehaviour {
     private BoxCollider enemyTrigger;
     private AudioClip mSoundClip;
     private AudioSource mAudioSource;
+    public GameObject alerted;
 
     private void Start() {
         mSoundClip = GetComponent<AudioSource>().clip;
@@ -32,12 +33,14 @@ public class EnemyAlert : MonoBehaviour {
         if (other.gameObject.tag == "Player") {
             GameController.Instance.squeak += 30;
             mAudioSource.PlayOneShot(mSoundClip);
+            alerted.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "Player") {
             GameController.Instance.squeak -= 30;
+            alerted.SetActive(false);
         }
     }
 }
