@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4353016590541438}
-  - component: {fileID: 114337161872903298}
   - component: {fileID: 114777555072490342}
   - component: {fileID: 82545928755932856}
+  - component: {fileID: 114323448069978704}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -137,7 +137,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114337161872903298
+--- !u!114 &114323448069978704
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,3 +160,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squeak: 0
+  squeakMeter: {fileID: 1724448792192054, guid: 63739f8670ed9e74d9ae7a9753c1f174,
+    type: 2}

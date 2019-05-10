@@ -559,7 +559,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114337161872903298, guid: 3b357c2e1fe86cb4089e2b6386fe87e7,
+      - m_Target: {fileID: 114323448069978704, guid: 3b357c2e1fe86cb4089e2b6386fe87e7,
           type: 2}
         m_MethodName: TwoButton
         m_Mode: 1
@@ -825,9 +825,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114337161872903298, guid: 3b357c2e1fe86cb4089e2b6386fe87e7,
+      - m_Target: {fileID: 114323448069978704, guid: 3b357c2e1fe86cb4089e2b6386fe87e7,
           type: 2}
-        m_MethodName: BackButton
+        m_MethodName: PreviousButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114337161872903298, guid: 3b357c2e1fe86cb4089e2b6386fe87e7,
+      - m_Target: {fileID: 114323448069978704, guid: 3b357c2e1fe86cb4089e2b6386fe87e7,
           type: 2}
         m_MethodName: OneButton
         m_Mode: 1

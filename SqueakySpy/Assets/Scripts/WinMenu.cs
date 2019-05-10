@@ -11,14 +11,14 @@ public class WinMenu : MonoBehaviour {
     private void Start() {
         mSoundClip = GetComponent<AudioSource>().clip;
         mAudioSource = GetComponent<AudioSource>();
+        GameObject.Find("egg").GetComponent<AudioSource>().Stop();
     }
 
     private void Update() {
         if (Input.GetKeyUp(KeyCode.Escape)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             mAudioSource.PlayOneShot(mSoundClip);
         }
         Time.timeScale = 0.0f;

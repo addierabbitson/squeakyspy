@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
     public float squeak;
     private Scene currentScene;
     private string sceneName;
+    public GameObject squeakMeter;
 
     private bool isLevel1;
     private bool isLevel2;
@@ -31,6 +32,7 @@ public class GameController : MonoBehaviour {
             Destroy(this.gameObject.GetComponent<AudioSource>());
             squeak = 0;
             isLevel1 = true;
+            squeakMeter.SetActive(true);
         }
         else if (sceneName != "Level 1") {
             isLevel1 = false;
@@ -40,6 +42,7 @@ public class GameController : MonoBehaviour {
             Destroy(this.gameObject.GetComponent<AudioSource>());
             squeak = 0;
             isLevel2 = true;
+            squeakMeter.SetActive(true);
         }
         else if (sceneName != "Level 2") {
             isLevel2 = false;

@@ -98,6 +98,9 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public Rigidbody fps_Rigidbody;
 
+    private AudioClip mSoundClip;
+    private AudioSource mAudioSource;
+
     #endregion
 
     #endregion
@@ -118,6 +121,8 @@ public class PlayerController : MonoBehaviour
         _crouchModifiers.defaultSprintSpeed = sprintSpeed;
         _crouchModifiers.defaultStrafeSpeed = walkSpeed;
         _crouchModifiers.defaultJumpPower = jumpPower;
+        mSoundClip = GetComponent<AudioSource>().clip;
+        mAudioSource = GetComponent<AudioSource>();
         #endregion
 
     }
@@ -221,7 +226,9 @@ public class PlayerController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         inputXY = new Vector2(horizontalInput, verticalInput);
-        if (inputXY.magnitude > 1) { inputXY.Normalize(); }
+        if (inputXY.magnitude > 1) {
+            inputXY.Normalize();
+        }
         Vector3 dMove = transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeed;
         float yv = fps_Rigidbody.velocity.y;
 
@@ -234,6 +241,7 @@ public class PlayerController : MonoBehaviour
         if (dMove.magnitude > 0 || !IsGrounded)
         {
             GetComponent<Collider>().material = advanced.zeroFrictionMaterial;
+            mAudioSource.PlayOneShot(mSoundClip);
         }
         else { GetComponent<Collider>().material = advanced.highFrictionMaterial; }
 
@@ -242,6 +250,7 @@ public class PlayerController : MonoBehaviour
         {
             StopAllCoroutines();
             StartCoroutine(wasWalking ? FOVKickOut() : FOVKickIn());
+            mAudioSource.PlayOneShot(mSoundClip);
         }
 
         if (useCrouch && _crouchModifiers.CrouchInputAxis != string.Empty)

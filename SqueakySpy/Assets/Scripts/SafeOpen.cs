@@ -8,8 +8,6 @@ public class SafeOpen : MonoBehaviour {
     public GameObject safeOpen;
     public GameObject safeClosed;
     public GameObject winMenu;
-    public GameObject squeakMeter;
-    public GameObject crossHair;
     public GameObject pressE;
     private bool isCasting;
 
@@ -33,8 +31,6 @@ public class SafeOpen : MonoBehaviour {
                     safeClosed.SetActive(false);
                     safeOpen.SetActive(true);
                     winMenu.SetActive(true);
-                    squeakMeter.SetActive(false);
-                    crossHair.SetActive(false);
                     pressE.SetActive(false);
                 }
                 isCasting = true;

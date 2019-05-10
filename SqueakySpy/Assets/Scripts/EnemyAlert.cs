@@ -9,8 +9,12 @@ public class EnemyAlert : MonoBehaviour {
     private float memeY;
     private float memeZ;
     private BoxCollider enemyTrigger;
+    private AudioClip mSoundClip;
+    private AudioSource mAudioSource;
 
     private void Start() {
+        mSoundClip = GetComponent<AudioSource>().clip;
+        mAudioSource = GetComponent<AudioSource>();
         enemyTrigger = GetComponent<BoxCollider>();
         memeX = 1.892371f;
         memeY = 2.602818f;
@@ -27,6 +31,7 @@ public class EnemyAlert : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
             GameController.Instance.squeak += 30;
+            mAudioSource.PlayOneShot(mSoundClip);
         }
     }
 
