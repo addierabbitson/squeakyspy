@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
     private Scene currentScene;
     private string sceneName;
     public GameObject squeakMeter;
+    public string timer;
 
     private bool isLevel1;
     private bool isLevel2;
