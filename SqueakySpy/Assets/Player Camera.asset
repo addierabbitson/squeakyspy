@@ -313,18 +313,18 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       colored: 0
-      intensity: 0.341
-      size: 0.48
-      luminanceContribution: 0.16
+      intensity: 0.218
+      size: 0.34
+      luminanceContribution: 0.51
   vignette:
     m_Enabled: 1
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.45
-      smoothness: 0.2
-      roundness: 1
+      intensity: 0.376
+      smoothness: 0.388
+      roundness: 0.927
       mask: {fileID: 0}
       opacity: 1
       rounded: 0
