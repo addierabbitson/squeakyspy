@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     private string sceneName;
     public GameObject squeakMeter;
     public string timer;
+    public float volume;
 
     private bool isLevel1;
     private bool isLevel2;
@@ -18,6 +19,7 @@ public class GameController : MonoBehaviour {
     private void Start() {
         isLevel1 = false;
         isLevel2 = false;
+        volume = 1.0f;
     }
 
     private void Update() {
@@ -28,6 +30,8 @@ public class GameController : MonoBehaviour {
             squeak = 100;
         else if (squeak < 0)
             squeak = 0;
+
+        AudioListener.volume = volume;
 
         if (sceneName == "Level 1" && !isLevel1) {
             Destroy(this.gameObject.GetComponent<AudioSource>());
