@@ -11,7 +11,7 @@ public class UITimer : MonoBehaviour {
     void Update() {
         time += Time.deltaTime;
    
-        var minutes = time / 60;
+        var minutes = time / 120;
         var seconds = time % 60;
         var fraction = (time * 100) % 100;
 
